@@ -11,7 +11,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-            <h1>Is this working?</h1>
+            <h1>hola, amiga</h1>
             </div>
         )
     }
