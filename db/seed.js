@@ -13,7 +13,7 @@ let rating = () => {
   let result = [];
   
   for (let i = 0; i < 6; i++) {
-    result.push(faker.random.number(5));
+    result.push(faker.random.number({min: 3, max: 5}));
   }
   
   return result;
@@ -36,7 +36,7 @@ const sampleReviews = () => {
 }
 
 const insertSampleReviews = function() {
-  Review.create(sampleReviews)
+  Review.create(sampleReviews())
     .then(() => { // can use this because of promise
       console.log('SEEDING SUCCESS');
       db.close();
